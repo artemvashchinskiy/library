@@ -1,0 +1,657 @@
+/*1*/
+/*2*/
+/*3*/
+/*4*/
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.wrapper {
+  padding: 50px 30px;
+  background-image: url("../pic/books.jpg");
+  background-attachment: fixed;
+  background-size: contain;
+}
+
+hr {
+  background-color: wheat;
+  border: 5px solid wheat;
+  border-radius: 5px;
+}
+
+.header {
+  background-color: lightgray;
+  color: aquamarine;
+  font-size: 30px;
+  padding-left: 30px;
+  height: 100px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.nav {
+  background-color: rgb(100, 70, 70);
+  border: 2px solid wheat;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 70px;
+}
+.nav div {
+  width: 210px;
+  height: 50px;
+  border: 2px solid wheat;
+  font-size: 10px;
+  color: wheat;
+  cursor: pointer;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: rgb(134, 103, 103);
+}
+.nav div:hover {
+  background-color: rgb(0, 0, 0);
+  color: white;
+}
+
+.table-container {
+  background-color: lightgrey;
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 20px;
+}
+.table-container table {
+  border-collapse: collapse;
+  width: 100%;
+  border: 1px solid #ddd;
+}
+.table-container table th, .table-container table td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+}
+.table-container table th button, .table-container table td button {
+  float: right;
+  padding: 6px;
+  margin-top: 8px;
+  margin-right: 16px;
+  background: #ddd;
+  font-size: 17px;
+  border: none;
+  cursor: pointer;
+}
+.table-container table th button:hover, .table-container table td button:hover {
+  background: #ccc;
+}
+.table-container table th:nth-child(1),
+.table-container table td:nth-child(1) {
+  width: 50%;
+}
+.table-container table th:nth-child(2),
+.table-container table td:nth-child(2) {
+  width: 30%;
+}
+.table-container table th:nth-child(3),
+.table-container table td:nth-child(3) {
+  width: 20%;
+}
+.table-container table th {
+  background-color: #f2f2f2;
+  font-weight: bold;
+}
+.table-container #cardsTable {
+  border-collapse: collapse;
+  width: 100%;
+  border: 1px solid #ddd;
+}
+.table-container #cardsTable th, .table-container #cardsTable td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+}
+.table-container #cardsTable th button, .table-container #cardsTable td button {
+  float: right;
+  padding: 6px;
+  margin-top: 8px;
+  margin-right: 16px;
+  background: #ddd;
+  font-size: 17px;
+  border: none;
+  cursor: pointer;
+}
+.table-container #cardsTable th button:hover, .table-container #cardsTable td button:hover {
+  background: #ccc;
+}
+.table-container #cardsTable th:nth-child(1),
+.table-container #cardsTable td:nth-child(1) {
+  width: 40%;
+}
+.table-container #cardsTable th:nth-child(2),
+.table-container #cardsTable td:nth-child(2) {
+  width: 20%;
+}
+.table-container #cardsTable th:nth-child(3),
+.table-container #cardsTable td:nth-child(3) {
+  width: 30%;
+}
+.table-container #cardsTable th:nth-child(4),
+.table-container #cardsTable td:nth-child(3) {
+  width: 10%;
+}
+.table-container #cardsTable th {
+  background-color: #f2f2f2;
+  font-weight: bold;
+}
+
+.histogram {
+  background-color: white;
+  padding: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+.histogram div {
+  overflow: hidden;
+  width: 10%;
+  padding: 5px;
+}
+.histogram .one {
+  background-color: #ff0000;
+}
+.histogram .two {
+  background-color: #ff7f00;
+}
+.histogram .three {
+  background-color: #ffff00;
+}
+.histogram .four {
+  background-color: #7fff00;
+}
+.histogram .five {
+  background-color: #00ff00;
+}
+.histogram .six {
+  background-color: #00ff7f;
+}
+.histogram .seven {
+  background-color: #00ffff;
+}
+.histogram .eight {
+  background-color: #007fff;
+}
+.histogram .nine {
+  background-color: #0000ff;
+}
+.histogram .ten {
+  background-color: #7f00ff;
+}
+
+.section {
+  background-color: lightgrey;
+  height: 100px;
+  padding: 30px;
+  color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.section button {
+  border: 1px solid darkgrey;
+  background-color: grey;
+  color: white;
+  height: 50px;
+  width: 150px;
+  font-size: 21px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding-top: 7px;
+}
+.section button:hover {
+  background-color: lightgrey;
+}
+.section .new-card {
+  background-color: lightgrey;
+  border: 2px solid rgb(100, 70, 70);
+  width: 500px;
+  height: 500px;
+  padding: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 30px 0;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+          box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  display: none;
+  text-align: center;
+  position: fixed;
+  z-index: 1;
+  top: 50%;
+  left: 50%;
+}
+.section .new-card .close-cross {
+  background-color: red;
+  float: right;
+  width: 30px;
+  height: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  cursor: pointer;
+  padding-top: 2px;
+}
+.section .new-card .close-cross:hover {
+  background-color: rgb(255, 146, 146);
+}
+.section .new-card .form-handlers {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 70px;
+}
+.section .new-card .form-handlers form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: normal;
+      -ms-flex-align: normal;
+          align-items: normal;
+  width: 90%;
+}
+.section .new-card .form-handlers form .forms {
+  color: rgb(73, 73, 73);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: normal;
+      -ms-flex-align: normal;
+          align-items: normal;
+  margin-bottom: 10px;
+}
+.section .new-card .form-handlers form .forms label {
+  width: 100%;
+}
+.section .new-card .form-handlers form .forms input {
+  padding: 6px;
+  margin-top: 8px;
+  font-size: 17px;
+  border: none;
+}
+.section .new-card .form-handlers form .forms button {
+  margin-top: 50px;
+  float: right;
+  padding: 6px;
+  background: #ddd;
+  font-size: 17px;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: rgb(73, 73, 73);
+}
+.section .new-card .form-handlers form .forms button:hover {
+  background: #ccc;
+}
+
+.article {
+  background-color: lightgrey;
+  padding: 30px;
+  position: relative;
+}
+.article .sort-search {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 30px 0;
+}
+.article .sort-search .sort-container form {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 5px;
+  background-color: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.article .sort-search .sort-container label {
+  display: block;
+  margin-bottom: 0px;
+  margin-right: 10px;
+}
+.article .sort-search .sort-container label p {
+  margin-top: 21px;
+  font-size: 18px;
+  color: grey;
+}
+.article .sort-search .sort-container select {
+  float: left;
+  padding: 6px;
+  margin-top: 8px;
+  font-size: 17px;
+  border: none;
+}
+.article .sort-search .sort-container input[type=submit] {
+  float: right;
+  padding: 6px;
+  margin-top: 8px;
+  margin-right: 16px;
+  background: #ddd;
+  font-size: 17px;
+  border: none;
+  cursor: pointer;
+}
+.article .sort-search .sort-container input[type=submit]:hover {
+  background: #ccc;
+}
+.article .sort-search .search-container {
+  float: right;
+}
+.article .sort-search input[type=text] {
+  padding: 6px;
+  margin-top: 8px;
+  font-size: 17px;
+  border: none;
+}
+.article .sort-search .search-container button {
+  float: right;
+  padding: 6px;
+  margin-top: 8px;
+  margin-right: 16px;
+  background: #ddd;
+  font-size: 17px;
+  border: none;
+  cursor: pointer;
+}
+.article .sort-search .search-container button:hover {
+  background: #ccc;
+}
+.article .table-container {
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 20px;
+}
+.article .table-container table {
+  border-collapse: collapse;
+  width: 100%;
+  border: 1px solid #ddd;
+}
+.article .table-container table th, .article .table-container table td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+}
+.article .table-container table th button, .article .table-container table td button {
+  float: right;
+  padding: 6px;
+  margin-top: 8px;
+  margin-right: 16px;
+  background: #ddd;
+  font-size: 17px;
+  border: none;
+  cursor: pointer;
+}
+.article .table-container table th button:hover, .article .table-container table td button:hover {
+  background: #ccc;
+}
+.article .table-container table th:nth-child(1),
+.article .table-container table td:nth-child(1) {
+  width: 40%;
+}
+.article .table-container table th:nth-child(2),
+.article .table-container table td:nth-child(2) {
+  width: 30%;
+}
+.article .table-container table th:nth-child(3),
+.article .table-container table td:nth-child(3) {
+  width: 10%;
+}
+.article .table-container table th:nth-child(4),
+.article .table-container table td:nth-child(4) {
+  width: 10%;
+}
+.article .table-container table th:nth-child(5),
+.article .table-container table td:nth-child(5) {
+  width: 10%;
+}
+.article .table-container table th {
+  background-color: #f2f2f2;
+  font-weight: bold;
+}
+.article .book-card {
+  background-color: lightgrey;
+  border: 2px solid rgb(100, 70, 70);
+  width: 500px;
+  height: 500px;
+  padding: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 30px 0;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+          box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  display: none;
+  text-align: center;
+  position: fixed;
+  z-index: 1;
+  top: 50%;
+  left: 50%;
+}
+.article .book-card .cross {
+  background-color: red;
+  float: right;
+  width: 30px;
+  height: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  cursor: pointer;
+  padding-top: 2px;
+}
+.article .book-card .cross:hover {
+  background-color: rgb(255, 146, 146);
+}
+.article .book-card .form-handler {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 70px;
+}
+.article .book-card .form-handler form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: normal;
+      -ms-flex-align: normal;
+          align-items: normal;
+  width: 90%;
+}
+.article .book-card .form-handler form .form-row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 10px;
+}
+.article .book-card .form-handler form .form-row label {
+  width: 100%;
+}
+.article .book-card .form-handler form .form-row input {
+  padding: 6px;
+  margin-top: 8px;
+  font-size: 17px;
+  border: none;
+}
+.article .book-card .form-handler form .form-row button {
+  margin-top: 50px;
+  float: right;
+  padding: 6px;
+  background: #ddd;
+  font-size: 17px;
+  border: none;
+  cursor: pointer;
+}
+.article .book-card .form-handler form .form-row button:hover {
+  background: #ccc;
+}
+
+.price {
+  background-color: lightgrey;
+  padding: 30px;
+}
+.price .table-container {
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 20px;
+}
+.price .table-container table {
+  border-collapse: collapse;
+  width: 100%;
+  border: 1px solid #ddd;
+}
+.price .table-container table th, .price .table-container table td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+}
+.price .table-container table th:nth-child(1),
+.price .table-container table td:nth-child(1) {
+  width: 10%;
+}
+.price .table-container table th:nth-child(2),
+.price .table-container table td:nth-child(2) {
+  width: 50%;
+}
+.price .table-container table th:nth-child(3),
+.price .table-container table td:nth-child(3) {
+  width: 30%;
+}
+.price .table-container table th:nth-child(4),
+.price .table-container table td:nth-child(4) {
+  width: 10%;
+}
+.price .table-container table th {
+  background-color: #f2f2f2;
+  font-weight: bold;
+}
+
+.footer {
+  background-color: rgb(100, 70, 70);
+  border: 2px solid wheat;
+  color: wheat;
+  padding: 20px;
+}/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,13 @@
+// https://www.omdbapi.com/?apikey=c7df2384&s=hello
+.wrapper {
+    padding: 50px 30px;  
+    background-image: url("../pic/books.jpg");
+    background-attachment:fixed;
+    background-size: contain;
+}
+
+hr {
+    background-color: wheat;
+    border: 5px solid wheat;
+    border-radius: 5px;
+}

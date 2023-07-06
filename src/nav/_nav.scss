@@ -1,0 +1,154 @@
+
+.nav {
+    background-color: rgb(100, 70, 70);
+    border: 2px solid wheat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 70px;
+    div {
+        width: 210px;
+        height: 50px;
+        border: 2px solid wheat;
+        font-size: 10px;
+        color: wheat;
+        cursor: pointer;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: rgb(134, 103, 103);
+    }
+    div:hover {
+        background-color: rgb(0, 0, 0);
+        color: white;
+    }
+}
+.table-container {
+    background-color: lightgrey;
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 20px;
+    table {
+        border-collapse: collapse;
+        width: 100%;
+        border: 1px solid #ddd;
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+            button {
+                float: right;
+                padding: 6px;
+                margin-top: 8px;
+                margin-right: 16px;
+                background: #ddd;
+                font-size: 17px;
+                border: none;
+                cursor: pointer;
+                }              
+                button:hover {
+                background: #ccc;
+            }
+        }  
+        th:nth-child(1),
+        td:nth-child(1) {
+            width: 50%;
+        }
+        th:nth-child(2),
+        td:nth-child(2) {
+            width: 30%;
+        }
+        th:nth-child(3),
+        td:nth-child(3) {
+            width: 20%;
+        }
+        th {
+            background-color: #f2f2f2;
+            font-weight: bold;
+        }
+    }
+    #cardsTable {
+        border-collapse: collapse;
+        width: 100%;
+        border: 1px solid #ddd;
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+            button {
+                float: right;
+                padding: 6px;
+                margin-top: 8px;
+                margin-right: 16px;
+                background: #ddd;
+                font-size: 17px;
+                border: none;
+                cursor: pointer;
+                }              
+                button:hover {
+                background: #ccc;
+            }
+        }  
+        th:nth-child(1),
+        td:nth-child(1) {
+            width: 40%;
+        }
+        th:nth-child(2),
+        td:nth-child(2) {
+            width: 20%;
+        }
+        th:nth-child(3),
+        td:nth-child(3) {
+            width: 30%;
+        }
+        th:nth-child(4),
+        td:nth-child(3) {
+            width: 10%;
+        }
+        th {
+            background-color: #f2f2f2;
+            font-weight: bold;
+        }
+    }
+}
+.histogram {
+    background-color: white;
+    padding: 20px;
+    display: flex;
+    align-items: flex-end;
+    div{
+        overflow: hidden;
+        width: 10%;
+        padding: 5px;
+    }
+    .one {
+        background-color: #ff0000;
+    }
+    .two {
+        background-color: #ff7f00;
+    }
+    .three {
+        background-color: #ffff00;
+    }
+    .four {
+        background-color: #7fff00;
+    }
+    .five {
+        background-color: #00ff00;
+    }
+    .six {
+        background-color: #00ff7f;
+    }
+    .seven {
+        background-color: #00ffff;
+    }
+    .eight {
+        background-color: #007fff;
+    }
+    .nine {
+        background-color: #0000ff;
+    }
+    .ten {
+        background-color: #7f00ff;
+    }
+}

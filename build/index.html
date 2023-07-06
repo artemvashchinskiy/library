@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="./css/style.css">  
+    <meta name="keywords">  
+    <meta name="description" content="">  
+    <meta name="robots" content="index, npfollow">  
+    <!-- <script src="https://code.jquery.com/jquery-3.7.0.js" integrity="sha256-JlqSTELeR4TLqP0OG9dxM7yDPqX1ox/HfgiSLBj8+kM=" crossorigin="anonymous"></script>
+    <script src="js/main.js"></script> -->
+</head>
+<body>
+  <div class="wrapper">
+      <div class="header">
+        <h1>LIBRARY</h1>
+      </div>
+      <div class="nav">
+        <div class="Books"><h5>Books</h5></div>
+        <div class="Visitors" id="visitorsButton"><h5>Visitors</h5></div>
+        <div class="Cards" id="cardsButton"><h5>Cards</h5></div>
+        <div class="Statistics"><h5>Statistics</h5></div>
+      </div>
+      <div class="table-container" id="visitorTableContainer" style="display: none;">
+        <table id="visitorTable">
+          <thead>
+            <tr>
+              <th>Full Name</th>
+              <th>Phone Number</th>
+              <th>Date of Visit</th>
+            </tr>
+          </thead>
+          <tbody id="visitorTableBody"></tbody>
+        </table>
+      </div>
+      <div class="table-container" id="cardsTableContainer"  style="display: none;">
+        <table id="cardsTable">
+          <thead>
+            <tr>
+              <th>Full Name:</th>
+              <th>Phone Number:</th>
+              <th>Selected Book:</th>
+              <th>Date of return</th>
+            </tr>
+          </thead>
+          <tbody id="cardsTableBody"></tbody>
+        </table>
+      </div>    
+      <div class="histogram" style="display: none;">
+        <div class="one"><p></p></div>
+        <div class="two"><p></p></div>
+        <div class="three"><p></p></div>
+        <div class="four"><p></p></div>
+        <div class="five"><p></p></div>
+        <div class="six"><p></p></div>
+        <div class="seven"><p></p></div>
+        <div class="eight"><p></p></div>
+        <div class="nine"><p></p></div>
+        <div class="ten"><p></p></div>
+      </div> 
+      <!-- <div class="histogram">
+        <div class="item-one"><div class="one"></div><p></p></div>
+        <div class="item-two"><div class="two"></div><p></p></div>
+        <div class="item-three"><div class="three"></div><p></p></div>
+        <div class="item-four"><div class="four"></div><p></p></div>
+        <div class="item-five"><div class="five"></div><p></p></div>
+        <div class="item-six"><div class="six"></div><p></p></div>
+        <div class="item-seven"><div class="seven"></div><p></p></div>
+        <div class="item-eight"><div class="eight"></div><p></p></div>
+        <div class="item-nine"><div class="nine"></div><p></p></div>
+        <div class="item-ten"><div class="ten"></div><p></p></div>
+      </div>  -->
+      <div class="table-container" id="statisticsTableContainer" style="display: none;" >
+        <table id="statisticsTable">
+          <thead>
+            <tr>
+              <th>Ratings:</th>
+              <th>Author:</th>
+              <th>Title:</th>
+              <th>Country:</th>
+              <th>Year:</th>
+              <th>Language:</th>
+              <th>Pages</th>
+              <th>Being read</th>
+            </tr>
+          </thead>
+          <tbody id="statisticsTableBody"></tbody>
+        </table>
+      </div>     
+      <div class="table-container" id="booksTableContainer"  style="display: none;">
+        <table id="booksTable">
+          <thead>
+            <tr>
+              <th>Author:</th>
+              <th>Title:</th>
+              <th>Country:</th>
+              <th>Year:</th>
+              <th>Language:</th>
+              <th>Pages</th>
+            </tr>
+          </thead>
+          <tbody id="booksTableBody"></tbody>
+        </table>
+      </div> 
+      <hr>
+      <div class="section">
+        <h3>ALL VISITORS</h3>
+        <button class="new" id="newVisitorButton"><p>New visitor</p></button>
+        <!-- <div class="new-card" style="display: none;">
+          <div class="close-cross"><p>X</p></div>
+          <div class="form-handlers">
+            <form id="visitorForm">
+              <div class="forms">
+                <label for="fullName">Full Name:</label>
+                <input type="text" id="fullName" placeholder="Enter full name" required>
+              </div>
+              <div class="forms">
+                <label for="phoneNumber">Phone Number:</label>
+                <input type="text" id="phoneNumber" placeholder="Enter phone number" required>
+              </div>
+              <div class="forms">
+                <label for="selectedBook">Selected Book:</label>
+                <select id="selectedBook" required>
+                  <option value="" disabled selected>Select a book</option>
+                </select>
+              </div>
+              <div class="forms">
+                <button type="submit" id="submitButton">Submit</button>
+              </div>
+            </form>
+          </div>
+        </div>   -->
+      </div>
+      <hr>
+      <div class="article">
+        <div class="sort-search">
+          <div class="sort-container">
+            <form id="bookForm">
+              <label for="books"><p>Choose a book:</p></label>
+              <select  id="books" name="books">
+                <!-- <option value="volvo">Volvo</option>
+                <option value="saab">Saab</option>
+                <option value="fiat">Fiat</option>
+                <option value="audi">Audi</option> -->
+              </select>
+              <input type="submit"></input>
+            </form>
+          </div>  
+          <div class="search-container">
+            <form action="/action_page.php">
+              <input type="text" id="bookInput" placeholder="Search.." name="search">
+              <button type="submit" id="addButtonas">Submit</button>
+            </form>
+          </div>
+        </div>
+        <div class="table-container">
+          <table id="bookTable">
+            <thead>
+              <tr>
+                <th>Title</th>
+                <th>Author</th>
+                <th>Language</th>
+                <th>Year</th>
+                <th>Take out</th>
+              </tr>
+            </thead>
+            <tbody id="tableBody">
+              <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>
+                  <button type="submit" id="addButton" style="display: none;">Submit</button>
+                  <button type="submit" disabled>Submit</button>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="book-card" style="display: none;">
+          <div class="cross"><p>X</p></div>
+          <div class="form-handler">
+            <form id="bookForm">
+              <div class="form-row">
+                <label for="fullName">Full Name:</label>
+                <input type="text" id="fullName" placeholder="Enter full name" required>
+              </div>
+              <div class="form-row">
+                <label for="phoneNumber">Phone Number:</label>
+                <input type="text" id="phoneNumber" placeholder="Enter phone number" required>
+              </div>
+              <div class="form-row toggle-out">
+                <label for="selectedBook">Selected Book:</label>
+                <input type="text" id="selectedBook" readonly>
+              </div>
+              <!-- <div class="forms toggle-in" style="display: none;">
+                <label for="selectedBook">Selected Book:</label>
+                <select id="selectedBook" required>
+                  <option id="options" value="" disabled selected>Select a book</option>
+                </select>
+              </div> -->
+              <div class="form-row">
+                <button type="submit" id="submitButton" class="data-sender">Submit</button>
+                <button type="button" id="saveButton" style="display: none;">Save</button>
+              </div>
+            </form>
+          </div>
+        </div>        
+      </div>
+      <hr>
+      <div class="price">
+        <div class="table-container">
+          <table>
+            <thead>
+              <tr>
+                <th>N/0</th>
+                <th>Author</th>
+                <th>Book</th>
+                <th>Price $</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>1</td>
+                <td>John Ronald Reuel Tolkien</td>
+                <td>The Lord of the Rings.</td>
+                <td>199</td>
+              </tr>
+              <tr>
+                <td>2</td>
+                <td>John Ronald Reuel Tolkien</td>
+                <td>The Hobbit.</td>
+                <td>399</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <hr>
+      <div class="footer">
+        <h3>The Hobbit or There and Back Again</h3>
+        <h4>John Ronald Reuel Tolkien</h4>
+        <p>This is a story about an unbelievable quest 
+          of a company of dwarves to win a share of the 
+          treasure guarded by the dragon. Halfconsciously
+           Bilbo Baggins follows them in their adventure:
+            a home-loving and quiet hobbit who, to his 
+            own astonishment, appeared to be a skilful 
+            and inventful burglar. Fighting with trolls, 
+            goblins, dwarves, elves and giant spiders, a 
+            conversation with Smaug the Great and rather 
+            unintentional presence at the Battle of Five 
+            Armies — that is how he spent most of the 
+            time during that quest. But there are also 
+            some brighter moments: a faithful friendship,
+             a tasty food, a good deal of laughing and 
+             singing.
+          The Hobbit written by professor Tolkien for 
+          his own children won ardent appreciation 
+          immediately aft er its publication, being at 
+          the same time a wonderful novel of its own and 
+          a preamble to the world-known The Lord of the Rings.
+        </p>
+        <h3>About author</h3>
+        <p>John Ronald Reuel Tolkien (1892–1973) — an English
+           writer, professor of Anglo-Saxon and English 
+           languages and literatures in the University of 
+           Oxford, creator of epic cycle of Middle-earth. 
+           The fantasy novel The Lord of the Rings made him 
+           a world celebrity. Up to now the Astrolabe 
+           Publishing produced the translations of his works 
+           The Hobbit or There and Back Again, The Lord of 
+           the Rings, The Silmarillion, The Children of Húrin,
+            The Legend of Sigurd and Gudrún, the collection of
+             short stories Tales from the Perilous Realm; the
+              edition of his The Fall of Arthur.
+        </p>
+      </div>
+  </div>
+        <script src="https://code.jquery.com/jquery-3.7.0.js" integrity="sha256-JlqSTELeR4TLqP0OG9dxM7yDPqX1ox/HfgiSLBj8+kM=" crossorigin="anonymous"></script>
+        <script src="js/main.js"></script>
+</body>
+</html>
+
