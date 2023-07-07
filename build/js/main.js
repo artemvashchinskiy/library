@@ -1,6 +1,6 @@
 'use strict';
 
-fetch('./js/data.json')
+fetch('./build/js/data.json')
   .then(response => response.json())
   .then(jsonData => {
     const tableBody = document.querySelector("#tableBody");
@@ -110,7 +110,7 @@ fetch('./js/data.json')
 
 
 
-fetch('./js/data.json')
+fetch('./build/js/data.json')
   .then(response => response.json())
   .then(jsonData => {
     const bookForm = document.querySelector("#bookForm");
@@ -185,7 +185,7 @@ function renderTable(selectedBook, data) {
     console.error('Error loading JSON data:', error);
   });
 
-  fetch('./js/data.json')
+  fetch('./build/js/data.json')
   .then(response => response.json())
   .then(jsonData => {
     const tableBody = document.querySelector("#tableBody");
@@ -555,7 +555,7 @@ newVisitorButtons.addEventListener("click", function(event) {
   dropdownInput.appendChild(defaultOption);
 
   // Fetch JSON data
-  fetch('./js/data.json')
+  fetch('./build/js/data.json')
     .then(response => response.json())
     .then(jsonData => {
       // Create and append options based on JSON data
@@ -1120,7 +1120,7 @@ window.addEventListener("load", populateSelectedBookColumn);
 */
 
 // Fetch the data from data.json
-fetch('./js/data.json')
+fetch('./build/js/data.json')
   .then(response => response.json())
   .then(data => {
     // Get a reference to the table body
@@ -1531,7 +1531,7 @@ retrieveDataFromLocalStorage();
 // Function to fetch book data from JSON file
 function fetchBookData(selectedBook) {
   // Replace `bookData.json` with the actual URL or path to your JSON file
-  return fetch('./js/data.json')
+  return fetch('./build/js/data.json')
     .then(function(response) {
       if (response.ok) {
         return response.json();
