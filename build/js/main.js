@@ -1772,3 +1772,25 @@ statisticsDiv.addEventListener("click", function() {
     histogramDiv.style.display = "none";
   }
 });
+
+//----------------------------------------------------------------
+
+
+
+// Get a reference to the close_table-container element
+var closeContainer = document.querySelector('.close_table-container');
+
+// Get a reference to the table-container element
+var tableContainer = document.querySelector('#booksTableContainer');
+
+// Add a click event listener to the close_table-container element
+closeContainer.addEventListener('click', function() {
+    // Scroll to the top of the page
+    window.scrollTo(0, 0);
+  // Toggle the display of the table-container
+  if (tableContainer.style.display === 'none') {
+    tableContainer.style.display = 'block';
+  } else {
+    tableContainer.style.display = 'none';
+  }
+});

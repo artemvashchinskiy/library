@@ -211,6 +211,51 @@ hr {
   background-color: #7f00ff;
 }
 
+.close_table-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* Two equal columns */
+  grid-template-rows: 1fr 1fr; /* Two equal rows */
+  gap: 10px; /* Adjust the gap between divs as desired */
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+  width: 75px;
+  height: 75px;
+  background-color: #ff0000;
+  opacity: 0.3;
+  border: 2px solid red;
+  border-radius: 75px;
+  position: relative;
+  position: fixed;
+  top: 500px; /* Adjust the top position as desired */
+  left: 75px; /* Adjust the left position as desired */
+  cursor: pointer;
+}
+
+.close_table-container > div::before,
+.close_table-container > div::after {
+  content: "";
+  position: absolute;
+  background-color: black;
+}
+
+.close_table-container > div::before {
+  width: 100%;
+  height: 2px;
+  top: 50%;
+  left: 0;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
+.close_table-container > div::after {
+  width: 2px;
+  height: 100%;
+  top: 0;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+
 .section {
   background-color: lightgrey;
   height: 100px;
